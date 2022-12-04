@@ -1,6 +1,8 @@
 import { Container } from "./App.styled";
 import { Profile } from "components/Profile/Profile";
-import user from "../Profile/user.json";
+import { Statistics } from "components/Statistics/Statistics";
+import user from "components/Profile/user.json";
+import data from "components/Statistics/data.json";
 
 export default function App() {
   return (
@@ -12,6 +14,7 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" data={data} />
     </Container>
   );
 }
