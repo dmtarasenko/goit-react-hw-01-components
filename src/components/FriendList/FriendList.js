@@ -1,12 +1,7 @@
 import PropTypes from "prop-types";
 
-import {
-  FriendListContainer,
-  Item,
-  Status,
-  Avatar,
-  Name,
-} from "components/FriendList/FriendList.styled";
+import { FriendListContainer } from "components/FriendList/FriendList.styled";
+import { FriendListItem } from "components/FriendList/FriendListItem/FriendListItem";
 
 export function FriendList({ friends }) {
   return (
@@ -20,16 +15,6 @@ export function FriendList({ friends }) {
         />
       ))}
     </FriendListContainer>
-  );
-}
-
-function FriendListItem({ avatar, name, isOnline }) {
-  return (
-    <Item>
-      <Status isOnline={isOnline}></Status>
-      <Avatar src={avatar} alt="User avatar" width="48" />
-      <Name>{name}</Name>
-    </Item>
   );
 }
 
